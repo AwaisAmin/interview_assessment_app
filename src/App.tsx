@@ -16,7 +16,7 @@ function App() {
     <>
       {/* <RouterProvider router={router}></RouterProvider> */}
       <Navbar />
-      {/* <Stepper /> */}
+      <Stepper />
     </>
   );
 }

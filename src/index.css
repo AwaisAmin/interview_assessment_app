@@ -3,13 +3,26 @@
 @tailwind utilities;
 
 .step_item {
-  @apply relative flex flex-col justify-center items-center w-36;
+  @apply relative flex flex-col justify-center items-center w-full;
 }
 
 .step_item:not(:first-child):before {
-  @apply content-[''] bg-slate-200 absolute w-full h-[3px] right-2/4 top-1/3 -translate-y-2/4;
+  @apply content-[''] bg-slate-200 absolute w-[92%] h-[3px] right-[54%] top-[25%] -translate-y-2/4;
 }
 
 .step {
-  @apply w-10 h-10 flex items-center justify-center z-10 border border-black relative rounded-full font-semibold bg-[#EBAD1E] text-white;
+  @apply w-6 h-6 flex items-center justify-center z-10 border border-black relative rounded-full font-semibold bg-transparent text-white;
+}
+
+.active .step {
+  @apply bg-[#EBAD1E] border-none;
+}
+
+.complete .step {
+  @apply bg-[#EBAD1E];
+}
+
+.complete:not(:first-child):before,
+.active:not(:first-child):before {
+  @apply bg-[#EBAD1E];
 }

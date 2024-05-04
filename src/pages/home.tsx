@@ -2,9 +2,9 @@ import Stepper from "../components/Stepper";
 
 const home = () => {
   return (
-    <div>
+    <>
       <Stepper />
-    </div>
+    </>
   );
 };
 
