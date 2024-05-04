@@ -1,10 +1,12 @@
-export const MenuItems = [
+import { FooterLinkText, JobCategory, MenuItem } from "../interfaces";
+
+export const MenuItems: MenuItem[] = [
   { text: "Service", href: "#" },
   { text: "Commercial", href: "#" },
   { text: "Login", href: "#" },
 ];
 
-export const footerLinkTexts = [
+export const footerLinkTexts: FooterLinkText[] = [
   "Link 1",
   "Link 2",
   "Link 3",
@@ -12,29 +14,13 @@ export const footerLinkTexts = [
   "Link 5",
 ];
 
-export const disclosures = [
-  {
-    question: "Job Category",
-    answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
-    fraction: "1/4",
-  },
-  {
-    question: "Service",
-    answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
-    fraction: "2/4",
-  },
-  {
-    question: "Task",
-    answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
-    fraction: "3/4",
-  },
-  {
-    question: "Task Details",
-    answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
-    fraction: "4/4",
-  },
+export const jobCategories: JobCategory[] = [
+  "Drywall & Paint",
+  "Doors, Knobs, Handles",
+  "Clogs, Leaks & Fixtures",
+  "Caulking",
+  "TV & Furniture Mounting",
+  "Furniture Assembly",
+  "Vent Cleaning",
+  "Other Categories",
 ];

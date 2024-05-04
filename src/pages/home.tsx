@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  Accordian,
-  Stepper,
-  StepperControls,
-  TaskSelection,
-} from "../components";
+import { Stepper, StepperControls, TaskSelection } from "../components";
 
 const Home = () => {
   const steps = ["Select Task", "Schedule", "Cart", "Confirm"];
@@ -15,7 +10,6 @@ const Home = () => {
     <section className="px-20">
       <Stepper steps={steps} currentStep={currentStep} completed={completed} />
       <TaskSelection />
-      <Accordian />
       <StepperControls
         steps={steps}
         currentStep={currentStep}
