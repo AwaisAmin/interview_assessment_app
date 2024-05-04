@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import RightArrow from "../assets/icons/RightArrow";
+import { useState } from "react";
+import StepperControls from "./StepperControls";
 
 const Stepper = () => {
   const steps = ["Select Task", "Schedule", "Cart", "Confirm"];
@@ -9,6 +8,9 @@ const Stepper = () => {
 
   return (
     <section className="px-20">
+      <h1 className="font-roboto text-24 font-semibold text-center py-7">
+        Project progress
+      </h1>
       <div className="flex justify-center">
         {steps?.map((step, i) => (
           <div
@@ -24,26 +26,12 @@ const Stepper = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col w-[308px] gap-[34px]">
-        <button
-          className="bg-[#0F1337] px-10 py-6 rounded-full"
-          onClick={() => {
-            currentStep === steps.length
-              ? setCompleted(true)
-              : setCurrentStep((prev) => prev + 1);
-          }}
-        >
-          <span className="text-white font-roboto text-24 font-semibold">
-            Continue to {"schedule"}
-          </span>
-        </button>
-        <div className="flex justify-center items-center gap-1">
-          <button className="font-montserrat text-18 font-bold text-[#0F1337]">
-            Save for later
-          </button>
-          <RightArrow />
-        </div>
-      </div>
+      <StepperControls
+        steps={steps}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
+        setCompleted={setCompleted}
+      />
     </section>
   );
 };

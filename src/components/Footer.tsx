@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 import { Behance, Facebook, Instagram, Twitter } from "../assets/icons";
+import { footerLinkTexts } from "../constants";
 
 const Footer = () => {
-  const linkTexts = ["Link 1", "Link 2", "Link 3", "Link 4", "Link 5"];
   return (
-    <footer className="px-5 mt-[200px] md:px-20 flex flex-col justify-between h-full gap-[150px]">
+    <footer className="px-5 mt-[100px] md:px-20 py-5 flex flex-col justify-between h-full gap-[150px]">
       <div className="flex justify-end gap-[56px]">
-        {linkTexts.map((text, index) => (
-          <a
-            href=""
+        {footerLinkTexts.map((text, index) => (
+          <Link
+            to="#"
             key={index}
             className="font-open-sans text-14 font-semibold text-[#212121]"
           >
             {text}
-          </a>
+          </Link>
         ))}
       </div>
       <div className="flex justify-between">

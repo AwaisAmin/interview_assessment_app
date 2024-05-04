@@ -1,6 +1,6 @@
 import Stepper from "../components/Stepper";
 
-const home = () => {
+const Home = () => {
   return (
     <>
       <Stepper />
@@ -8,4 +8,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;

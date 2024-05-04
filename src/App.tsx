@@ -1,24 +1,18 @@
-// import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Stepper from "./components/Stepper";
-// import Layout from "./components/Layout";
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Layout />,
-//     children: [{ path: "" }],
-//   },
-// ]);
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/home";
+import Layout from "./components/Layout";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [{ path: "", element: <Home /> }],
+    },
+  ]);
   return (
     <>
-      {/* <RouterProvider router={router}></RouterProvider> */}
-      <Navbar />
-      <Stepper />
-      <Footer />
+      <RouterProvider router={router}></RouterProvider>
     </>
   );
 }
