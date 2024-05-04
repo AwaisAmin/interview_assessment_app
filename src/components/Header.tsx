@@ -6,7 +6,7 @@ import menu from "../assets/menu.png";
 import { Cart, DownArrow, RightArrow } from "../assets/icons";
 import { MenuItems } from "../constants";
 
-const Navbar = () => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -69,4 +69,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

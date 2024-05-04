@@ -1,13 +1,8 @@
-import { useState } from "react";
-import StepperControls from "./StepperControls";
+import { StepperControlsProps } from "../interfaces";
 
-const Stepper = () => {
-  const steps = ["Select Task", "Schedule", "Cart", "Confirm"];
-  const [currentStep, setCurrentStep] = useState(1);
-  const [completed, setCompleted] = useState(false);
-
+const Stepper = ({ steps, currentStep, completed }: StepperControlsProps) => {
   return (
-    <section className="px-20">
+    <>
       <h1 className="font-roboto text-24 font-semibold text-center py-7">
         Project progress
       </h1>
@@ -26,13 +21,7 @@ const Stepper = () => {
           </div>
         ))}
       </div>
-      <StepperControls
-        steps={steps}
-        currentStep={currentStep}
-        setCurrentStep={setCurrentStep}
-        setCompleted={setCompleted}
-      />
-    </section>
+    </>
   );
 };
 

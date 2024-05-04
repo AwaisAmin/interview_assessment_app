@@ -7,15 +7,21 @@ const StepperControls = ({
   setCurrentStep,
   setCompleted,
 }: StepperControlsProps) => {
+  const handleStepNavigation = () => {
+    if (setCurrentStep) {
+      if (currentStep === steps.length) {
+        setCompleted && setCompleted(true);
+      } else {
+        setCurrentStep((prev) => prev + 1);
+      }
+    }
+  };
+
   return (
-    <div className="flex flex-col w-[308px] gap-[34px]">
+    <div className="flex flex-col items-center gap-[34px] my-10">
       <button
-        className="bg-[#0F1337] px-10 py-6 rounded-full"
-        onClick={() => {
-          currentStep === steps.length
-            ? setCompleted(true)
-            : setCurrentStep((prev) => prev + 1);
-        }}
+        className="bg-[#0F1337] w-[308px]  px-10 py-6 rounded-full"
+        onClick={handleStepNavigation}
       >
         <span className="text-white font-roboto text-24 font-semibold">
           Continue to{" "}
