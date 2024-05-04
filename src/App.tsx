@@ -1,7 +1,22 @@
+// import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Stepper from "./components/Stepper";
+// import Layout from "./components/Layout";
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Layout />,
+//     children: [{ path: "" }],
+//   },
+// ]);
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      {/* <RouterProvider router={router}></RouterProvider> */}
+      <Navbar />
+      {/* <Stepper /> */}
     </>
   );
 }
