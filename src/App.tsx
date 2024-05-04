@@ -1,4 +1,5 @@
 // import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Stepper from "./components/Stepper";
 // import Layout from "./components/Layout";
@@ -17,6 +18,7 @@ function App() {
       {/* <RouterProvider router={router}></RouterProvider> */}
       <Navbar />
       <Stepper />
+      <Footer />
     </>
   );
 }
