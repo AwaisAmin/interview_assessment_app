@@ -2,6 +2,7 @@ import Accordian from "./Accordian";
 import JobCategory from "./JobCategory";
 import Service from "./Service";
 import Task from "./Task";
+import TaskDetail from "./TaskDetail";
 
 const TaskSelection = () => {
   return (
@@ -20,6 +21,11 @@ const TaskSelection = () => {
       />
       <Accordian question="Service" fraction="2/4" answer={<Service />} />
       <Accordian question="Task" fraction="3/4" answer={<Task />} />
+      <Accordian
+        question="Task Details"
+        fraction="4/4"
+        answer={<TaskDetail />}
+      />
     </section>
   );
 };

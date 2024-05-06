@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { UseFormRegister, FieldValues } from "react-hook-form";
 
 export interface StepperControlsProps {
   steps: string[];
@@ -28,3 +29,16 @@ export interface MenuItem {
 export type FooterLinkText = string;
 
 export type JobCategory = string;
+
+// FORM TYPES
+
+export interface Option {
+  label: string;
+  value: string;
+}
+
+export interface RadioButtonGroupProps {
+  name: string;
+  options: Option[];
+  register: UseFormRegister<FieldValues>;
+}
